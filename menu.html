@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#183b2b"><meta name="description" content="Life's Good Kitchen food menu and prices in Colombo, Sri Lanka.">
+<title>Menu & Prices | Life's Good Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.menu-page-hero{padding:78px clamp(22px,8vw,120px) 65px;background:linear-gradient(120deg,#183b2b,#315641);color:#fff}
+.menu-page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,70px);line-height:1.05;margin:12px 0}
+.menu-page-hero h1 em{color:#d7c49a;font-weight:500}
+.menu-page-hero p:not(.eyebrow){max-width:600px;color:#e1e9df;font-size:14px}
+.menu-page-hero .eyebrow{color:#d7c49a}
+.menu-section{min-height:60vh}
+.menu-card img{height:205px;image-rendering:auto}
+.menu-card-body{padding:20px}
+.menu-card h3{font-size:19px}
+.menu-card p{font-size:12px;line-height:1.65}
+.menu-card-bottom{align-items:center}
+.price{font-size:16px;white-space:nowrap}
+.add-btn{width:38px;height:38px;cursor:pointer}
+.category-tabs button{cursor:pointer;font-size:11px}
+.price-note{font-size:11px;line-height:1.6}
+.back-home{display:inline-block;margin-top:20px;color:#f5eedf;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:680px){.menu-page-hero{padding:58px 22px 45px}.menu-card img{height:145px}.menu-card-body{padding:13px}.menu-card h3{font-size:15px}.menu-card p{font-size:10px}.price{font-size:12px}}
+</style>
+</head><body>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/logo.jpg" alt="Life's Good Kitchen logo"><span>life's good <b>kitchen</b></span></a>
+<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<nav class="nav"><a href="index.html#story">Our Story</a><a href="menu.html">Menu & Prices</a><a href="index.html#gallery">Gallery</a><a href="index.html#reviews">Reviews</a><a href="index.html#location">Find Us</a><button class="nav-order" data-open-cart>Order food <span class="cart-count">0</span></button></nav></header>
+<main>
+<section class="menu-page-hero"><p class="eyebrow">LIFE'S GOOD KITCHEN · COLOMBO</p><h1>Our menu &<br><em>clear prices.</em></h1><p>Browse the currently listed selection, filter by category and add your favourites to the basket. Prices are shown in Sri Lankan rupees (LKR).</p><a class="back-home" href="index.html">← Back to home</a></section>
+<section class="menu-section section" id="menu"><div class="section-heading"><div><p class="eyebrow">FRESHLY PICKED FOR YOU</p><h2>Find your next<br><em>favourite dish.</em></h2></div><p class="heading-side">Only categories with listed menu items are shown. Categories without added dishes will not appear.</p></div>
+<div class="menu-tools"><div class="category-tabs" role="group" aria-label="Filter menu"></div><label class="search-box"><span>⌕</span><input id="menu-search" type="search" placeholder="Search food or drink..." aria-label="Search menu"></label></div>
+<div class="menu-grid" id="menu-grid"></div>
+<p class="price-note">Prices are based on publicly listed menu information and may differ from dine-in prices. Availability and current prices should be confirmed with the restaurant. Images are illustrative selections from the supplied restaurant PDF and may not correspond exactly to each individual dish.</p>
+</section>
+<section class="order-banner"><div><p class="eyebrow">YOUR FAVOURITES, YOUR WAY</p><h2>Ready for something<br><em>delicious?</em></h2><p>Add items to your basket and send an order request to the restaurant via WhatsApp.</p></div><button class="button button-light" data-open-cart>Open your basket ↗</button></section>
+</main>
+<footer class="footer"><a class="brand footer-brand" href="index.html"><img src="assets/logo.jpg" alt=""><span>life's good <b>kitchen</b></span></a><p>Good food. Good company. A little more green.</p><div><a href="index.html">Home</a><a href="index.html#location">Location</a><a target="_blank" rel="noopener" href="https://www.instagram.com/lifesgoodkitchen/">Instagram ↗</a></div><small>Independent demo website concept. Not an official restaurant website.</small></footer>
+<div class="cart-overlay" id="cart-overlay" aria-hidden="true"><aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title"><div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cart-title">Your basket</h2></div><button class="close-cart" aria-label="Close basket">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-total"><span>Estimated total</span><strong id="cart-total">LKR 0</strong></div><p class="cart-disclaimer">This sends an order request via WhatsApp. The restaurant must confirm availability, delivery and final price.</p><form id="order-form"><label>Your name<input name="customer" required placeholder="Name"></label><label>Order type<select name="orderType"><option>Delivery (confirm availability)</option><option>Pickup</option><option>Dine-in enquiry</option></select></label><label>Delivery address / note<textarea name="address" rows="2" placeholder="Address or special requests"></textarea></label><button class="button button-dark full" type="submit">Send order on WhatsApp ↗</button></form></aside></div>
+<script src="script.js"></script>
+</body></html>
